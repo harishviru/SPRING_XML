@@ -23,10 +23,7 @@ public class Client {
 		
 		//cast to welcome Class
 		Welcome wel =(Welcome)obj;
-		
 		wel.sayHello();
 		
 	}
-	
-	
 }
