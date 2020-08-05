@@ -5,7 +5,7 @@ public class Welcome {
 
 	
 	public Welcome() {
-    System.out.println("Welcome Construtor......!");
+       System.out.println("Welcome Construtor......!");
 	}
 	
 	public void sayHello(){
