@@ -1,0 +1,33 @@
+//BeanFactoryClient
+<------------------------------------------usingClassNdFilePathResources------------------------------------->
+Welcome Construtor......!
+singleton scopes objs are----->
+com.java.beans.Welcome@4c75cab9
+com.java.beans.Welcome@4c75cab9
+Welcome to Spring XML World................!
+<------------------------------------------diffBeanScopes------------------------------------->
+Welcome Construtor......!
+Welcome Construtor......!
+prototype scopes objs are----->
+com.java.beans.Welcome@2471cca7
+com.java.beans.Welcome@5fe5c6f
+Welcome to Spring XML World................!
+
+
+//ApplicationFactoryClient
+<------------------------------------------usingClassNdFilePathResources------------------------------------->
+Welcome Construtor......!
+
+<------------------------------------------diffBeanScopes------------------------------------->
+Welcome Construtor......!
+singleton scope .........................................
+com.java.beans.Welcome@735f7ae5
+com.java.beans.Welcome@735f7ae5
+
+Welcome Construtor......!
+Welcome Construtor......!
+prototype scope .........................................
+com.java.beans.Welcome@180bc464
+com.java.beans.Welcome@1324409e
+Welcome to Spring XML World................!
+
