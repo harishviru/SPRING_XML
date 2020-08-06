@@ -1,0 +1,13 @@
+wish------------Generic bean: class [com.java.beans.WishMessage]; 
+scope=singleton; 
+abstract=false;
+ lazyInit=false; 
+ autowireMode=0;
+  dependencyCheck=0; 
+  autowireCandidate=true; 
+  primary=false;
+  factoryBeanName=null; 
+  factoryMethodName=null;
+   initMethodName=null; 
+   destroyMethodName=null;
+   defined in class path resource [com/java/cfgs/SetterInjection.xml]

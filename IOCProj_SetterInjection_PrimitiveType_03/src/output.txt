@@ -1,0 +1,5 @@
+WishMessage.StaticBlock ..........!
+WishMessage. 0-param constructor
+WishMessage.setMessage() Method........!
+WishMessage.getMessage() Method........!
+Hello ....!Good morning
