@@ -12,7 +12,7 @@ public class Client {
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 		
-		//load Xml File
+		//load XML File
 		Resource resource=new ClassPathResource("com/java/cfgs/SpringConfig.xml");
 		
 		//Create IOC Container & load XML File into container
