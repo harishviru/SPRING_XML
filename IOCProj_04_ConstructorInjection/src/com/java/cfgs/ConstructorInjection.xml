@@ -1,0 +1,61 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+	<beans>
+
+   		            <description>
+   		                          1. By default constructor injection it uses from o-x  index
+   		                          2.If Class having multiple param construtors ,
+   		                          here IOC Container confuses to assign value then we can use "type"  or "index" attribute of constructor-arg 
+   		            </description>
+   		   		              <!-- Constructor Injection of oneParam Injection-->
+	            		<bean id="wish" class="com.java.beans.WishMessage">
+	            		     <constructor-arg value="Welcome to constructor Injection....!" />
+	            		</bean>
+   		
+	            			<!-- Constructor Injection of 0-Param Injection-->            		
+	            		<bean id="wel_oparam" class="com.java.beans.WelcomeMessage"/>
+	            		
+	            		<!-- Constructor Injection of 1-Param Injection--> 
+	            		<bean id="wel_1param" class="com.java.beans.WelcomeMessage">
+	            		      <constructor-arg value="Harish"/>
+	            		</bean>
+	            		
+	            		<!-- Constructor Injection of 2-Param Injection--> 
+	            		<bean id="wel_2param" class="com.java.beans.WelcomeMessage">
+	            		  <constructor-arg value="Harish"/>
+	            		    <constructor-arg value="24"/>
+	            		</bean>
+	            		
+	            		<!-- Constructor Injection of 3-Param Injection--> 
+	            		<bean id="wel_3param" class="com.java.beans.WelcomeMessage">
+	            		     <constructor-arg value="Harish"/>
+	            		     <constructor-arg value="24"/>
+	            		      <constructor-arg value="mymail@yourmail.com"/>
+	            		</bean>
+	            		
+	            		<!-- Constructor Injection of 4-Param Injection--> 
+	            		<bean id="wel_4param" class="com.java.beans.WelcomeMessage">
+	            		     <constructor-arg value="Harish"/>
+	            		     <constructor-arg value="24"/>
+	            		      <constructor-arg value="mymail@yourmail.com"/>
+	            		      <constructor-arg value="Male"/>
+	            		</bean>  
+	            		
+	            		
+	            		
+	            		<!-- index attribute usage  -->
+	            		<!-- order changing by index attribute -->
+	            		<bean id="wel_Index_attr" class="com.java.beans.WelcomeMessage">
+	            		     <constructor-arg value="28" index="1" />   
+	            		     <constructor-arg value="HarishViru" index="0" />
+	            		      <constructor-arg value="mymail@yourmail.com" index="2"/>
+	            		</bean>
+	            		
+	            		<!-- type attribute usage -->
+	            		<!-- order changing by type attribute -->
+	            		<bean id="wel_type_attr" class="com.java.beans.WelcomeMessage">
+	            		     <constructor-arg value="28" type="int" />   
+	            		     <constructor-arg value="HarishViru"  type="java.lang.String"/>
+	            		</bean>
+	            		
+	</beans>	
