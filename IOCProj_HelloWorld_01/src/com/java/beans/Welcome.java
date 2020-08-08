@@ -2,6 +2,7 @@ package com.java.beans;
 
 
 public class Welcome {
+	
 
 	
 	public Welcome() {
