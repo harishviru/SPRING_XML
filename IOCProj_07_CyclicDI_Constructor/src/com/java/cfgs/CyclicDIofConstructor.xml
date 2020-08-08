@@ -1,0 +1,36 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+  
+  <description>
+                    #.Cyclic or Circular Dependent Injection (Via Constructor)
+                    Example :
+                    .A class having dependency of B class object by using constructor,similary
+                     B class  having dependency of A class object by using constructor
+                     
+                     IOC #Problem :
+                     While Container trying to create A class object it comes to know A class having 
+                     B class dependent . so that i goes to B class to create object but i unable to create 
+                     B class object becaz B having A dependency  so that it agian goes to A class.......
+                     then again IOC Container trying to create A class Object.........? It Never ends (Called Cyclic DI)
+                     
+                   Note :We cannot able resolve by using constructors                       
+  </description>
+
+            <!-- A class having one param constructor of B class-->
+          <bean id="a" class="com.java.beans.A">
+             <constructor-arg ref="b"/>
+          </bean>
+
+    <!-- B class having one param constructor of Aclass-->
+          <bean id="b" class="com.java.beans.B">
+             <constructor-arg ref="a"/>
+          </bean>
+
+
+
+
+
+
+	
+</beans>
