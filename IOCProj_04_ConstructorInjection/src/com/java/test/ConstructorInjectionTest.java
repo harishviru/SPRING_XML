@@ -71,6 +71,7 @@ public class ConstructorInjectionTest {
 				//get WelcomeMessage Object from IOC Container by getBean("") method
 				WelcomeMessage param_0 = factory.getBean("wel_Index_attr",WelcomeMessage.class);	
 				WelcomeMessage param_1 = factory.getBean("wel_type_attr",WelcomeMessage.class);	
+				WelcomeMessage wel_Int_param_by_type = factory.getBean("wel_Int_param",WelcomeMessage.class);	
 				System.out.println("*----End----------------------------"+Thread.currentThread().getStackTrace()[1].getMethodName()+"------------------------------*");
 				System.out.println();
 	}

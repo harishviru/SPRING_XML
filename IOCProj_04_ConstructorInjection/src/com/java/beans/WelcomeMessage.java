@@ -20,8 +20,13 @@ public class WelcomeMessage {
 	}
 
 	public WelcomeMessage(String name) {
-		System.out.println("WelcomeMessage -1-param constructor");
+		System.out.println("WelcomeMessage -1(string)-param constructor");
 		this.name = name;
+	}
+
+	public WelcomeMessage(int age) {
+		System.out.println("WelcomeMessage -1(int-param)-param constructor");
+		this.age = age;
 	}
 
 	public WelcomeMessage(String name, int age) {

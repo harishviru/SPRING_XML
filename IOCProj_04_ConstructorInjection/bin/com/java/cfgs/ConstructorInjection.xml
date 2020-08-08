@@ -58,4 +58,8 @@
 	            		     <constructor-arg value="HarishViru"  type="java.lang.String"/>
 	            		</bean>
 	            		
+	            		<bean id="wel_Int_param" class="com.java.beans.WelcomeMessage">
+	            		      <constructor-arg value="29" type="int"/>
+	            		</bean>
+	            		
 	</beans>	
