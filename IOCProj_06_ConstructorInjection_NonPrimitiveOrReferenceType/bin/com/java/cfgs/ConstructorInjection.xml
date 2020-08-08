@@ -18,6 +18,7 @@
    		                    <property name="modalYear" value="2012"/>
    		            </bean>
    		            
+   		            <!-- for testing/getting default beanIds -->
    		            <bean  class="com.java.beans.WishMessage">
    		            <property name="message" value="Hello world...!"></property>
    		            </bean>
