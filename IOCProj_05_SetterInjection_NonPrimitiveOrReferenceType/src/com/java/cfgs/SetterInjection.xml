@@ -1,0 +1,19 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+	<beans>
+	                  <description>
+	                                  * Setter Injection :
+	                                   .Setter Injection is used by "property" tag by give setter property name in property name attribute
+	                                   .if simple/primitive  values in setter method ,then we can use value tag or value attribute
+	                                   .if reference/non-primitive data is there we can use "ref" attribute of property tag
+	                  </description>
+	
+	                    <bean id="d" class="java.util.Date"/>
+	
+	            			<!-- Setter Injection of reference data/Secondary data -->
+	            		<bean id="wish" class="com.java.beans.WishMessageGenerator">
+	            		      <property name="date" ref="d" />
+	            		</bean>		
+	            		
+	            		
+	</beans>	

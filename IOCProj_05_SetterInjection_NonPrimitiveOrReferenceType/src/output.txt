@@ -1,0 +1,7 @@
+WishMessageGenerator.StaticBlock ..........!
+WishMessageGenerator. 0-param constructor
+WishMessageGenerator.setDate() method
+*--start--------------------generateWishMessage---------------------------------*
+hour----------->12
+*--End--------------------generateWishMessage---------------------------------*
+Wish Message----->Good Afternoon.....HarishViru
