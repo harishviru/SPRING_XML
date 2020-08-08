@@ -9,9 +9,9 @@
    		                          3.If constructor having reference data/Non-primitive data ,then we can use "ref" attribute in constructor-arg tag
    		            </description>
    		   		              <!-- Constructor Injection of oneParam Injection-->
-	            		<bean id=" s" class="com.java.beans.Car">
+	            		<bean id=" car" class="com.java.beans.Car">
                                  <constructor-arg value="Benz"/>
-                                 <constructor-arg ref=""/>
+                                 <constructor-arg ref="engine"/>
 	            		</bean>
    		
    	                 	<bean id="engine" class="com.java.beans.Engine">

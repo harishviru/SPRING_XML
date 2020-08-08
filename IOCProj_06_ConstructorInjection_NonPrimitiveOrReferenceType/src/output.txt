@@ -1,0 +1,16 @@
+Engine.Static Block
+Engine.setModalYear() Method ...........!
+Car.StaticBlock 
+Car. 2 param constructor........!
+WishMessage.StaticBlock ..........!
+*..start....printCarData.......................
+carName-----Benz
+Engine.......(ModalYear)-----------2012
+*..End....printCarData.......................
+beanId--->car
+beanId--->engine
+beanId--->com.java.beans.WishMessage#0
+beanId--->java.util.Date#0
+beanId--->java.util.Date#1
+beanId--->java.util.Date#2
+beanId--->java.util.Date#3
