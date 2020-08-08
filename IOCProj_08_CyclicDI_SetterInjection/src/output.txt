@@ -1,0 +1,6 @@
+A.Static Block
+A. 0-param constructor
+B.Static Block
+B. 0-param constructor
+B.setA() Method..!A [b=null]
+A.setB() Method....!B [a=A [b=null]]
