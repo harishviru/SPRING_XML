@@ -1,0 +1,21 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+	<beans>
+
+   		            <description>
+   		                          1. By default constructor injection it uses order from o-x  index()
+   		                          2.If Class having multiple param construtors ,
+   		                          here IOC Container confuses to assign value then we can use "type"  or "index" attribute of constructor-arg 
+   		                          3.If constructor having reference data/Non-primitive data ,then we can use "ref" attribute in constructor-arg tag
+   		            </description>
+   		   		              <!-- Constructor Injection of oneParam Injection-->
+	            		<bean id=" s" class="com.java.beans.Car">
+                                 <constructor-arg value="Benz"/>
+                                 <constructor-arg ref=""/>
+	            		</bean>
+   		
+   	                 	<bean id="engine" class="com.java.beans.Engine">
+   		                    <property name="modalYear" value="2012"/>
+   		            </bean>
+		
+	</beans>	
