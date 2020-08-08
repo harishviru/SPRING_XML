@@ -3,7 +3,7 @@
 	<beans>
 
    		            <description>
-   		                          1. By default constructor injection it uses from o-x  index
+   		                          1. By default constructor injection it uses order from o-x  index()
    		                          2.If Class having multiple param construtors ,
    		                          here IOC Container confuses to assign value then we can use "type"  or "index" attribute of constructor-arg 
    		            </description>
