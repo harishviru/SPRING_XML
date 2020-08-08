@@ -1,0 +1,25 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+  
+  <description>
+                    #.Cyclic or Circular Dependent Injection (Via Setter_ConstructorInjection)
+                    Example :
+                    .A class having dependency of B class object by using setterMethod,similarly
+                     B class  having dependency of A class object by using Constructor
+                     
+  </description>
+
+            <!-- A class having one  setMethod(B b) -->
+          <bean id="a" class="com.java.beans.A">
+             <property name="b" ref="b"/>                    
+          </bean>
+
+            <!--B class having one  setMethod(A a) -->
+          <bean id="b" class="com.java.beans.B">
+                   <constructor-arg>
+                           <ref bean="a"/>
+                   </constructor-arg>
+          </bean>
+
+</beans>
