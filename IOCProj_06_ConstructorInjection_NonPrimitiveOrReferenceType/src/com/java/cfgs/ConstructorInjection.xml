@@ -17,5 +17,17 @@
    	                 	<bean id="engine" class="com.java.beans.Engine">
    		                    <property name="modalYear" value="2012"/>
    		            </bean>
+   		            
+   		            <bean  class="com.java.beans.WishMessage">
+   		            <property name="message" value="Hello world...!"></property>
+   		            </bean>
+   		            
+		                <bean class="java.util.Date"/>
+		                <bean class="java.util.Date"/>
+		                <bean class="java.util.Date"/>
+		                <bean class="java.util.Date"/>
+
+		                
+		
 		
 	</beans>	

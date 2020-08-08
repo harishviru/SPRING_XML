@@ -1,8 +1,6 @@
 package com.java.beans;
 
-/**
- * Here we are 1-param constructor 
- */
+
 public class WishMessage {
 
 	private String message;
@@ -10,11 +8,9 @@ public class WishMessage {
 	static{
 		System.out.println("WishMessage.StaticBlock ..........!");
 	}
-	
-	public WishMessage(String message) 
-	{
-		System.out.println("WishMessage. 1-param constructor");
-		 this.message=message;
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 	public String getMessage() {
