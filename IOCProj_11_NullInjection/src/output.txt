@@ -1,0 +1,11 @@
+Address. Static Block...!
+Employee.Static Block......!
+Employee. 3 -param constructor.......!
+Employee. 3 -param constructor.......!
+empId         :752
+empName  : HarishViru
+empAddress: Address [street=Ameerpet, village=Ameerpet, mandal=Ameerpet, district=Hyderabad, pincode=500038, state=Telangana]
+
+empId         :563
+empName  : Arjun
+empAddress: null

@@ -1,0 +1,34 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			
+			<beans>
+			                <description>
+			                                    Null value injection
+			                </description>
+			   
+			   <bean id="emp1" class="com.java.beans.Employee">
+			         <constructor-arg value="752"/>
+			         <constructor-arg value="HarishViru"/>
+			         <constructor-arg ref="addrs1"/>
+			   </bean>
+			   	   <bean id="emp2" class="com.java.beans.Employee">
+			         <constructor-arg value="563"/>
+			         <constructor-arg value="Arjun"/>
+			         <constructor-arg >
+			                        <null></null>
+			         </constructor-arg>
+			   </bean>
+			   
+			   <bean id="addrs1" class="com.java.beans.Address">
+			               <property name="street" value="Ameerpet"/>
+			               <property name="village" value="Ameerpet"/>
+			               <property name="mandal" value="Ameerpet"/>
+			               <property name="district" value="Hyderabad"/>
+			               <property name="pincode" value="500038"/>
+			               <property name="state" value="Telangana"/>
+			   </bean>
+			   
+			   
+			
+			
+			</beans>
