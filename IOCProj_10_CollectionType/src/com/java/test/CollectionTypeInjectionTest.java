@@ -85,6 +85,7 @@ public class CollectionTypeInjectionTest {
 		 System.out.println(person.getFruits());
 		 System.out.println(person.getCricketers());
 		 System.out.println(person.getCountryCapitals());
+		 System.out.println(person.getMydbProps());
 		 
 		   System.out.println("Check IOC Container  Implementation classes are.........!");
 		   System.out.println("Vector -------->"+person.getFruits().getClass());

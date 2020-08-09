@@ -28,6 +28,9 @@
                            <entry key="America" value="Washington, D.C."/>        
             </util:map>               
            </property>   
+           <property name="mydbProps">
+              <util:properties location="classpath:mysqldb.properties"/>              
+           </property>
 </bean>
 
 

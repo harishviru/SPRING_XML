@@ -134,6 +134,7 @@ Person.0-param constructor...!
 [Mango, Guava, papaya ]
 [Yuvi , Viru, Sachin]
 {America=Washington, D.C., India=Delhi, Japan=Tokyo}
+{password=root, url=jdbc:mysql://localhost/test, driverName=com.mysql.jdbc.Driver, userName=root}
 Check IOC Container  Implementation classes are.........!
 Vector -------->class java.util.Vector
 HashSet-------->class java.util.HashSet
