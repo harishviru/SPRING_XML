@@ -1,0 +1,6 @@
+EnggCollege. Static Block....!
+EnggCollege. 0-param constructor..!
+Student. Static Block..........!
+Student. 0-param constructor.....!
+[reqAnn_dependency] enggCollege ------>EnggCollege [collegeName=JNTUK, student=Student [studId=H250, studName=HarishViru]]
+

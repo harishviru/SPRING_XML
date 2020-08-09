@@ -1,0 +1,38 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			
+			<beans>  
+			                <description>
+			                                   # Dependency Check :
+			                                   .By default constructor arguments are mandatory call
+			                                   *If you want make setter injection is mandatory,then we can use "dependency-check"
+			                              
+			                                    #The possible values of dependency-check="..."  are
+			                                                                                                                      .none         //Not required to call any setter method   [Default]
+			                                                                                                                      .all              //Required to call all setter methods(Primitive,Non-primitive)
+			                                                                                                                      .objects    //Required to call non-primitive setter methods.
+			                                                                                                                      .simple      //Required to call primitive/simple setter methods.
+			                        
+			                          NOTE   :Default value of dependency-check="..." is none. (Not required to call any setter methods).        
+			                        *NOTE   : If you want make ALL BEANS SETTER METHOD MANDATORY ,then we can uses  " default-dependency-check=""  " in 
+			                                        beans xml tag by passing one of above possible values		
+			                                        
+			                                        
+			                   ***Note :  If you want make one or more setter method mandatory not all setter methods.
+			                                      Then we can use @Required ANNONTATION on setter method                           
+			                                        	                
+			                </description>
+
+			                <bean id="reqAnn_dependency" class="com.java.beans.EnggCollege"  dependency-check="all">			   
+			                 			                        <property name="collegeName" value="JNTUK"/>
+                                                                <property name="student" ref="stud"/>
+			             </bean>
+			               <bean id="stud" class="com.java.beans.Student" >
+			                         <property name="studId" value="H250"/>
+			                         <property name="studName" value="HarishViru"/>
+			               </bean>
+			               
+			               <!-- To active @Required Annotation  -->
+			               <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+			               
+			</beans>
