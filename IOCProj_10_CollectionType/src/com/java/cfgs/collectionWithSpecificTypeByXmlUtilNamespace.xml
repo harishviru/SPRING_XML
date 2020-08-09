@@ -5,7 +5,21 @@
                                                         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
                                                        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-
+<description>
+	                           1. For List Implementation classes we can use   <!-- <list> <value>....</value> </list> -->
+	                           2. For List Implementation classes we can use  <!-- <set> <value>....</value> </set> -->
+	                           3. For Map Implementation classes we can use  <!-- <map>  <entry key ="", value="/> </map> -->
+	                 Note : By default If you use 
+                                                <!--  <list>-->   tag    (IOC Container takes ArrayList as Imp  class)     
+                                               <!-- <set> -->    tag    (IOC Container takes LinkedHashSet as Imp  class)     
+                                                <!-- <map>-->  tag  (IOC Container takes LinkedHashSet as Imp  class)     
+                                                
+                   NOTE : for Reference data we can use "ref" attribute/tag instead of "value" tag or attribute   
+                   NOTE : 
+                    // if we want use Specific Collection Type (Vector,Stack,HashMap...etc)
+                        To support the  Specific Collection Type we can use Xml util namespace.
+                                                                                        
+	</description>	
 <bean id="per" class="com.java.beans.Person">
            <property name="fruits">
                          <util:list  list-class="java.util.Vector">
