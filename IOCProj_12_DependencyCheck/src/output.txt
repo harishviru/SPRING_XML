@@ -1,0 +1,18 @@
+EnggCollege. Static Block....!
+EnggCollege. 0-param constructor..!
+EnggCollege. 0-param constructor..!
+EnggCollege. 0-param constructor..!
+Student. Static Block..........!
+Student. 0-param constructor.....!
+EnggCollege. 0-param constructor..!
+.................dependecy-check=*none* ....................{Not required to call any setter methods   [Default]}
+[none_dependency_Check]  noneCollege------>EnggCollege [collegeName=null, student=null]
+
+.................dependecy-check=*simple *....................{ Required to call simple/primitive value setter methods  }
+[simple_dependency_Check]simpleCollege------>EnggCollege [collegeName=JNTUH, student=null]
+
+.................dependecy-check=*Objects *....................{ Required to call reference/non-primitive value setter methods  }
+[objects_dependency_Check]objectsCollege------>EnggCollege [collegeName=null, student=Student [studId=H250, studName=HarishViru]]
+
+.................dependecy-check=*all *....................{ Required to call all setter methods  }
+[all_dependency_Check]allCollege------>EnggCollege [collegeName=JNTUK, student=Student [studId=H250, studName=HarishViru]]

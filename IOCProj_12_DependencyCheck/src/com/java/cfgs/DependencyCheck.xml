@@ -1,0 +1,48 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			
+			<beans>  
+			                <description>
+			                                   # Dependency Check :
+			                                   .By default constructor arguments are mandatory call
+			                                   *If you want make setter injection is mandatory,then we can use "dependency-check"
+			                              
+			                                    #The possible values of dependency-check="..."  are
+			                                                                                                                      .none         //Not required to call any setter method   [Default]
+			                                                                                                                      .all              //Required to call all setter methods(Primitive,Non-primitive)
+			                                                                                                                      .objects    //Required to call non-primitive setter methods.
+			                                                                                                                      .simple      //Required to call primitive/simple setter methods.
+			                        
+			                          NOTE   :Default value of dependency-check="..." is none. (Not required to call any setter methods).        
+			                        *NOTE   : If you want make ALL BEANS SETTER METHOD MANDATORY ,then we can uses  " default-dependency-check=""  " in 
+			                                        beans xml tag by passing one of above possible values			                
+			                </description>
+
+                          
+			             <bean id="none_dependency_Check" class="com.java.beans.EnggCollege"  dependency-check="none">			   
+			                 <!-- Not required to call any setter method.....! -->
+			             </bean>
+			   
+			          <bean id="simple_dependency_Check" class="com.java.beans.EnggCollege"  dependency-check="simple">			   
+			                 <!--  Required to call simple/primitive value  setter methods.....! -->
+			                      <property name="collegeName" value="JNTUH"/>
+			             </bean>
+			   
+			           <bean id="objects_dependency_Check" class="com.java.beans.EnggCollege"  dependency-check="objects">			   
+			                 <!--  Required to call simple/primitive value  setter methods.....! -->
+                                           <property name="student" ref="stud"/>
+			             </bean>
+			             
+			             
+			                <bean id="all_dependency_Check" class="com.java.beans.EnggCollege"  dependency-check="all">			   
+			                 <!--  Required to call simple/primitive value  setter methods.....! -->
+			                 			                      <property name="collegeName" value="JNTUK"/>
+                                                                <property name="student" ref="stud"/>
+			             </bean>
+			             
+			               <bean id="stud" class="com.java.beans.Student" >
+			                           <!-- -Here we are not required call any setter method. .....becoz no dependency-check attribute in these bean-->
+			                         <property name="studId" value="H250"/>
+			                         <property name="studName" value="HarishViru"/>
+			               </bean>
+			</beans>
