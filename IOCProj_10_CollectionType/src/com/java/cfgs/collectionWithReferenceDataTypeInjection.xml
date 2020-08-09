@@ -1,0 +1,40 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			
+<beans>
+	<description>
+	                           1. For List Implementation classes we can use   <!-- <list> <value>....</value> </list> -->
+	                           2. For List Implementation classes we can use  <!-- <set> <value>....</value> </set> -->
+	                           3. For Map Implementation classes we can use  <!-- <map>  <entry key ="", value="/> </map> -->
+	                 Note : By default If you use 
+                                                <!--  <list>-->   tag    (IOC Container takes ArrayList as Imp  class)     
+                                               <!-- <set> -->    tag    (IOC Container takes LinkedHashSet as Imp  class)     
+                                                <!-- <map>-->  tag  (IOC Container takes LinkedHashSet as Imp  class)     
+                                                
+                   NOTE : for Reference data we can use "ref" attribute/tag instead of "value" tag or attribute                                                                        
+	</description>	
+		 
+		<bean id="enggClg" class="com.java.beans.EnggCollege">
+		        <property name="enggFacultyList">
+		                  <list>
+		                         <ref  bean="engFc1"/>
+		                         <ref  bean="engFc2"/>
+		                         <ref  bean="engFc3"/>		                  
+		                  </list>
+		        </property>			
+		</bean>
+		
+		<bean id="engFc1" class="com.java.beans.EnggFaculty">
+		              <property name="facultyName" value="Raghu"/>
+		               <property name="subject" value="SpringBoot"/>
+		</bean>	
+		<bean id="engFc2" class="com.java.beans.EnggFaculty">
+		              <property name="facultyName" value="Ashok"/>
+		               <property name="subject" value="Hibernate"/>
+		</bean>
+		<bean id="engFc3" class="com.java.beans.EnggFaculty">
+		              <property name="facultyName" value="Harikrishna"/>
+		               <property name="subject" value="Corejava"/>
+		</bean>
+
+</beans>	

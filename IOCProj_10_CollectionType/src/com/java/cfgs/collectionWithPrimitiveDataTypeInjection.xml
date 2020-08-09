@@ -1,0 +1,61 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			
+<beans>
+	<description>
+	                           1. For List Implementation classes we can use   <!-- <list> <value>....</value> </list> -->
+	                           2. For List Implementation classes we can use  <!-- <set> <value>....</value> </set> -->
+	                           3. For Map Implementation classes we can use  <!-- <map>  <entry key ="", value="/> </map> -->
+	                 Note : By default If you use 
+                                                <!--  <list>-->   tag    (IOC Container takes ArrayList as Imp  class)     
+                                               <!-- <set> -->    tag    (IOC Container takes LinkedHashSet as Imp  class)     
+                                                <!-- <map>-->  tag  (IOC Container takes LinkedHashSet as Imp  class)                                                
+	</description>	
+		 
+		 <bean id="stud" class="com.java.beans.Student">
+		      <property name="studNames">            <!-- <list> <value>....</value> </list> -->
+		                <list>
+		                        <value>Harish</value>
+		                       	 <value>Ramu</value>		                       
+		                       	 <value>Raju</value>	                       
+		                         <value>swapana</value>	                       
+		                </list>
+		      </property>
+		      <property name="studIds">
+		                <set>                                  <!-- <set> <value>....</value> </set> -->
+		                  <value>150</value>
+		                 <value>108</value>
+		                 <value>152</value>
+		                 <value>136</value>	                
+		                </set>	               
+		      </property>
+		      <property name="studSubjMarks">
+		              <map>                                     <!-- <map>  <entry key ="", value="/> </map> -->
+		                  <entry  key="maths" value="75"/>
+		                   <entry key="sanskrit"><value>98</value></entry>
+		                   <entry>
+		                            <key><value>Physics</value></key>
+		                             <value>52</value>
+		                   </entry>
+		              </map>              
+		      </property>
+		    </bean>
+		      
+		 <bean id="emp" class="com.java.beans.Employee">
+		           <constructor-arg>
+		                       <list>
+		                                <value>Murthy</value>
+		                       		      <value>Laxman</value>
+		                       		       <value>spandana</value>
+		                       </list>
+		           </constructor-arg>
+		          <constructor-arg>
+		                               <props >                     
+		                                      <prop key="720">spandana</prop>                <!--  <prop key="keyVal"> value</prop> -->
+		                                      <prop key="540">Laxman</prop>  
+		                                      <prop key="241">Murthy</prop>  
+		                               </props>
+		         </constructor-arg>
+		 </bean>
+
+</beans>	

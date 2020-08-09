@@ -1,0 +1,36 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+                                                        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                                                       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+<bean id="per" class="com.java.beans.Person">
+           <property name="fruits">
+                         <util:list  list-class="java.util.Vector">
+                                  <value>Mango</value>
+                                  <value>Guava</value>
+                                  <value>papaya </value>                         
+                         </util:list>
+           </property>
+           <property name="cricketers">
+           <util:set  set-class="java.util.HashSet">
+                                  <value>Viru</value>
+                                  <value>Sachin</value>
+                                  <value>Yuvi </value>                         
+                         </util:set>      
+           </property>
+           <property name="countryCapitals">
+            <util:map  map-class="java.util.TreeMap">
+                          <entry key="India" value="Delhi"/>
+                          <entry key="Japan" value="Tokyo"/>
+                           <entry key="America" value="Washington, D.C."/>        
+            </util:map>               
+           </property>   
+</bean>
+
+
+
+
+</beans>
