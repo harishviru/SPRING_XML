@@ -1,0 +1,8 @@
+Order. Static Block...!
+Order. 0-param constructor...!
+Product.  Static Block.....!
+Product. 0-param contructor...!
+Flipkart. Static Block........!
+Flipkart. 0-param constructor
+Flipkart [uName=HViru, product=Product [prodId=P789, prodName=smartPhone, order=Order [orderId=o756, address=Hyd]]]
+

@@ -1,0 +1,31 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			
+			<beans>  
+			                <description>
+			                                   # :depends-on="beanId"
+			                                 		If you want make one bean depends on another bean ,then we can use 
+			                                 	   depends-on="beanId" attribute.
+			                                 	  
+			                                 	  Ex : Product depends on order and address. then we can  use depends-on="beanId" attribute.                  	    		                                        	                
+			                </description>
+
+                            <!-- Flipkart is depends on Product -->
+                       <bean id="fkrt" class="com.java.beans.Flipkart" depends-on="prd">
+                                   <property name="uName" value="HViru"/>
+                                   <property name="product" ref="prd"/>
+                       </bean>
+  
+                           <!-- Product is depends on Order -->
+                        <bean id="prd" class="com.java.beans.Product"  depends-on="ord">
+                                 <property name="prodId" value="P789"/>
+                                 <property name="prodName" value="smartPhone"/>
+                                 <property name="order" ref="ord"/>
+                        </bean>
+
+                           <bean id="ord" class="com.java.beans.Order">
+                                    <property name="orderId" value="o756"/>
+                                     <property name="address" value="Hyd"/>
+                           </bean>
+         
+			</beans>
