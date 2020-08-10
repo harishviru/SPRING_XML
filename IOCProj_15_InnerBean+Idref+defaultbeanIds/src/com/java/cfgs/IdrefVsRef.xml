@@ -1,0 +1,59 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			
+			<beans>
+			           <description>
+			                           #Idref vs ref attribute.
+			                           
+			                           .Spring idref element is used to pass the id of a bean to another bean as string. 
+			                           .The idref works same as "VALUE" attribute but 
+			                           .when we use idref then there MUST be a bean with that id which we pass to idref. 
+			                           .The advantage of using idref over value attribute is that if there will be no bean with that id, it will throw error at runtime.
+			                             like Invalid bean name 'yourBeanId' in bean reference for bean property ' YourBeanId'
+			                             
+			                             The idref allows validating the existence of bean with that id at deployment time. 
+			                             The idref is used with constructor-arg or property elements.
+			           
+			                       In One line we can say like these
+			                       =>The idref element is simply an error-proof way to pass the id (string value - not a reference) of another bean in the container to a constructor-arg/ or property element.
+			           
+			                      <!-- 
+			                      		   <bean id="theTargetBean" class="..."/>
+                                           <bean id="theClientBean" class="...">
+                                                       <property name="targetName">
+                                                              <idref bean="theTargetBean"/>
+                                                        </property>
+                                           </bean>
+			                      
+			                      The above bean definition snippet is exactly equivalent (at runtime) to the following snippet:
+
+                                      <bean id="theTargetBean" class="..." />
+                                     <bean id="client" class="...">
+                                            <property name="targetName" value="theTargetBean"/>
+                                       </bean>
+			                       -->
+			                      Note :
+			                    ->ref is used to pass the bean that the ref refers to.
+                                ->idref is used to pass the name of the bean (as a String) that is referred to.		           
+			           </description>
+			
+			             <bean id="car"  class="com.java.beans.Car">
+			                        <property name="carName">
+			                                   <idref bean="honda"/>  <!-- It taking , value as String -->
+			                         </property>
+			                        <property name="engine" >
+			                                           <ref bean="honda"/>
+			                        </property>
+			             </bean>
+			
+			            <bean id="honda" class="com.java.beans.Engine">    <!--If "e2015" not found to container then it throw error like=====> Invalid bean name 'e2015' in bean reference for bean property 'engine' -->
+			                           <constructor-arg value="2018"/> 
+			                            <constructor-arg ref="brake"/>    
+			            </bean>
+			
+					<bean id="brake" class="com.java.beans.Brake">
+					      <property name="brakeComp" value="Akebono Brake Industry Co., Ltd."/>
+					</bean>
+						
+			</beans>
+			

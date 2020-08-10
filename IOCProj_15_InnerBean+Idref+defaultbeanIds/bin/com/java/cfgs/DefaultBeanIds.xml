@@ -1,0 +1,19 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			
+			<beans>
+			                <description>
+			                             #Default Bean ids
+			                               What are default bean ids are creating by IOC Container.
+			                                Ex :
+			                               <!--   
+			                                    <bean class="java.util.Date"/>
+			                                 --> 
+			                                 The Default bean id of above bean element is java.util.Date#0     
+			                </description>
+			             
+			                        <bean class="java.util.Date"/>
+			                        <bean class="java.util.Date"/>
+			                        <bean class="java.util.Date"/>
+			                        <bean class="java.util.Date"/>
+			</beans>

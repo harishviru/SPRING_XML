@@ -1,0 +1,23 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			
+			<beans>
+			                <description>
+			                             #Inner Bean
+			                              Inner beans are beans that are defined within the scope of another bean. 
+			                              Thus, a bean tag  inside the property or constructor-arg elements is called inner bean
+			                
+			                </description>
+			   
+			   <bean id="hb" class="com.java.beans.HumanBeing">
+			           <property name="name" value="Harish"/>
+			             <property name="heartBeart">
+			                                    <!-- InnerBean.....! -->
+			                                       <bean class="com.java.beans.HearBeat">
+			                                                       <property name="bloodPressure" value="120/80"/>
+			                                                       <property name="beatPerMin" value="72"/>
+			                                       </bean>
+			             </property>
+			   </bean>
+			
+			</beans>

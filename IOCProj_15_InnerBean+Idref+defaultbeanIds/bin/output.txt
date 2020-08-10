@@ -1,0 +1,21 @@
+#InnerBeanTest
+HumanBeing. Static Block..........!
+HumanBeing. o-param constructor..!
+HearBeat. Static Block..........!
+HearBeat. o-param constructor..!
+HumanBeing [name=Harish, heartBeart=HearBeat [bloodPressure=120/80, beatPerMin=72]]
+
+#IDREF_Test
+Car -o param constructor
+Brake. o param constructor...!
+Engine. 2 param constructor...!
+Car [carName=honda, engine=Engine [modalYear=2018, brake=Brake [brakeComp=Akebono Brake Industry Co., Ltd.]]]
+engine :Engine [modalYear=2018, brake=Brake [brakeComp=Akebono Brake Industry Co., Ltd.]]
+engine ModalYear :2018
+
+#DefaultBeanIdsTest
+beanId --->java.util.Date#0
+beanId --->java.util.Date#1
+beanId --->java.util.Date#2
+beanId --->java.util.Date#3
+Mon Aug 10 15:44:44 IST 2020m
