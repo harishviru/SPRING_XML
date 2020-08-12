@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">	         
+			         <description>
+			                        #P and C Namespec:  (Alternate shortest way )
+                                    .p-namespace to inject the setter-based dependency .
+                                    .c-namespace to inject the constructor-based dependency
+			         </description>
+			         
+			         <!-- SetterInjection by using p namespace....! -->
+			      <bean id="book" class="com.java.beans.Book" 
+			               p:bookName="Spring in Action"  p:author="Craig Walls"
+			               p:price="500"   p:publishedDate-ref="pdate"  />
+			      <bean id="pdate" class="java.util.Date" p:date="20" p:month="2" p:year="105"/>
+			      
+			      <!-- -Constructor injection by using c-namespace -->
+			      <bean id="emp" class="com.java.beans.Employee"  c:empId="758" c:empName="Harish" c:address-ref="adr"/>			      
+			      <bean id="adr" class="com.java.beans.Address"  c:city="Hyderabad" c:zipcode="500038"/>
+                   <!-- -Constructor injection by using c-namespace  + index usage-->     
+			      <bean id="emp1" class="com.java.beans.Employee"  c:_0="963" c:_1="Jyothi" c:address-ref="adr1"/>			      
+			      <bean id="adr1" class="com.java.beans.Address"  c:_0="Bangalore" c:_1="530068"/>
+						      
+</beans>

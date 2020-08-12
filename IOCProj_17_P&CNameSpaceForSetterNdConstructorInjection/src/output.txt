@@ -1,0 +1,16 @@
+Book.  0-param constructor...!
+Book.setAuthor()
+Book.setBookName()
+Book.setPrice()
+Book.setPublishedDate()
+Address. 2- param constructor
+Employee. 3- param constructor...!
+Address. 2- param constructor
+Employee. 3- param constructor...!
+p namespace...........!
+Book [bookName=Spring in Action, author=Craig Walls, price=500.0, publishedDate=Sun Mar 20 22:46:47 IST 2005]
+c namespace...........!
+Employee [empId=758, empName=Harish, address=Address [city=Hyderabad, zipcode=500038]]
+
+c namespace........... by using index!
+Employee [empId=963, empName=Jyothi, address=Address [city=Bangalore, zipcode=530068]]
