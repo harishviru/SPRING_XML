@@ -1,0 +1,20 @@
+#BeanInheritanceViaSetterInjectionTest
+Book.  0-param constructor...!
+Book.  0-param constructor...!
+Book.  0-param constructor...!
+Book.  0-param constructor...!
+Book.  0-param constructor...!
+baseBook---->Book [bookName=Spring, author=Rod Johnson, price=489.0]
+craigBook---->Book [bookName=Spring, author= Craig Walls, price=670.0]
+JulieBook---->Book [bookName=Spring, author=Julie Fogliano, price=1500.0]
+
+jamieBook---->Book [bookName=Java, author=Jamie Chan, price=450.0]
+allenBook---->Book [bookName=Java, author=Alan Mycroft and Mario Fusco, price=750.0]
+
+#BeanInheritanceViaConstructorInjectionTest
+Car. 8 -param constructor...!
+Car. 8 -param constructor...!
+harCar---->Car [regNo=AP09EK4265, model=swift, company=suzuki, color=red, owner=Somesh, fuelType=diesel]
+palCar---->Car [regNo=AP09EK4362, model=swift, company=suzuki, color=white, owner=pallaviG, fuelType=diesel]
+
+

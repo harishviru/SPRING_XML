@@ -1,0 +1,42 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			
+			<beans>
+			         <description>
+			                        #Bean inheritance:
+			                        A child bean definition inherits configuration data from a parent definition. 
+			                        The child definition can override some values, or add others, as needed.
+        
+			         </description>
+			         
+			         <!-- Bean inheritance without template (abstract="false") [Actually by default abstract="false"]  -->
+			    <bean id="baseBook" class="com.java.beans.Book">
+			                <property name="bookName" value="Spring"/>
+			                <property name="author" value="Rod Johnson"/>
+			                <property name="price" value="489"/>
+			    </bean>
+			    <bean id="craigBook" class="com.java.beans.Book" parent="baseBook">
+			                <property name="author" value=" Craig Walls"/>
+			                <property name="price" value="670"/>
+			    </bean>
+			    <bean id="JulieBook" class="com.java.beans.Book" parent="baseBook">
+			                <property name="author" value="Julie Fogliano"/>
+			                <property name="price" value="1500"/>
+			    </bean>
+
+
+    <!-- Bean inheritance with template (abstract="true")  -->
+			    <bean id="bookTemplate" class="com.java.beans.Book" abstract="true">
+			                <property name="bookName" value="Java"/>
+			                <property name="author" value="Alan Mycroft and Mario Fusco"/>
+			                <property name="price" value="200"/>
+			    </bean>
+			    <bean id="jamieBook" class="com.java.beans.Book" parent="bookTemplate">
+			                <property name="author" value="Jamie Chan"/>
+			                <property name="price" value="450"/>
+			    </bean>
+			    <bean id="allenBook" class="com.java.beans.Book" parent="bookTemplate">
+                     <!--  <property name="author" value="Allen B. Downey"/> -->	
+		                    <property name="price" value="750"/>
+			    </bean>
+			</beans>

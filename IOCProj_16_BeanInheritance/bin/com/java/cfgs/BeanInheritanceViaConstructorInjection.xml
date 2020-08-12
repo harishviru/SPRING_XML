@@ -1,0 +1,33 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			
+			<beans>
+			         <description>
+			                        #Bean inheritance:
+			                        A child bean definition inherits configuration data from a parent definition. 
+			                        The child definition can override some values, or add others, as needed.
+        
+			         </description>
+			         
+    <!-- Bean inheritance with template (abstract="true")  -->
+
+	<bean id="baseCarTemp" class="com.java.beans.Car" abstract="true">
+		<constructor-arg  value="swift"  index="1"/><!-- model -->
+		<constructor-arg value="suzuki" index="2" /> <!-- company -->
+		<constructor-arg  value="diesel" index="5" /> <!-- fuelType -->
+		<constructor-arg  value="Somesh" index="4" />    <!-- owner -->
+	</bean>
+
+	<bean id="harCar" class="com.java.beans.Car" parent="baseCarTemp">
+		<constructor-arg  value="AP09EK4265"  index="0"/>
+		<constructor-arg  value="red" index="3" />
+	</bean>
+
+	<bean id="palCar" class="com.java.beans.Car" parent="baseCarTemp">
+		<constructor-arg  value="AP09EK4362"   index="0" />
+		<constructor-arg value="white"   index="3" />
+		<constructor-arg  value="pallaviG"   index="4" />
+	</bean>
+
+			  
+			</beans>
