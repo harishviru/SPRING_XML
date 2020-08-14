@@ -1,0 +1,4 @@
+Engine. o-param constructor..!
+Truck [engine=Engine [engineNo=6243, modalYear=2016]]
+Truck [engine=Engine [engineNo=6243, modalYear=2016]]
+Engine [engineNo=6243, modalYear=2016]
