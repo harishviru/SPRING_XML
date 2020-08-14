@@ -1,0 +1,52 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			
+			<beans>
+			         <description>
+			                      #AutoWiring 
+			                        .AutoWiring means automatically inject it dependent objects to target class object.
+			                        .Actually Bean element  having "autowire=''Xvalues " " attribute having possible values
+			                                          Xvalues  are : .byType                       (Setter DI)                  [ByType mechanism]
+			                                                                  .byName                     (Setter DI)                  [ByName mechanism]
+			                                                                  .constructor              (Constructor)              [ByType mechanism]
+			                                                                  .autodetect               (Setter DI and Constructor) [ByType mechanism]
+			                                                                  .no                     (by default)
+			                         .And also By default bean element  having autowire-candidate="true"  :means by default every element	
+			                                                                                                                                                          participate in autoWiring	                        
+
+                                    Note :If you want use autoWiring for all beans ,then we can use default-autowire="Xvalues"
+                                                      Xvalues  are : .byType
+			                                                                  .byName
+			                                                                  .constructor
+			                                                                  .autodetect
+			                                                                  .no                     (by default)
+			             *****Vimp : #If X class having 
+			                                                                .0-param constructor
+			                                                                .1-param constructor
+			                                                                .setter method
+			                                    Then IOC Container choose 0-param constructor to create object and uses setter method to inject values.
+			                                 If X class having 
+			                                                                .1-param constructor
+			                                                                .setter method
+			                                    Then IOC Container choose 1-param constructor to create object (Constructor Injection.).
+			                       If X class having 
+			                                                                .0-param constructor or no constructor in X class
+			                                                                .setter method
+			                                    Then IOC Container choose 0-param constructor to create object and uses setter method to inject values.                                                                                                              
+			         </description>
+			         
+			        <!-- .AutoWiring byusing autodetect [Internally it use byType mode]......! -->    
+			        <bean id="student" class="com.java.beans.Student"  autowire="autodetect"/>
+			        
+                     <bean id="adds"  class="com.java.beans.Address" >
+                               <property name="city" value="Kadapa"/>
+                               <property name="zipcode" value="516001"/>
+                     </bean>
+			      
+                     <bean id="adds1"  class="com.java.beans.Address" autowire-candidate="false">
+                               <property name="city" value="Hyderabad"/>
+                               <property name="zipcode" value="500038"/>
+                     </bean>
+			      
+			      
+			</beans>

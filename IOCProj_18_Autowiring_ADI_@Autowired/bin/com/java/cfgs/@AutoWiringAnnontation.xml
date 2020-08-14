@@ -1,0 +1,45 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			
+			<beans>
+			   <description>
+			                        #AutoWiring 
+			                        .AutoWiring means automatically inject it dependent objects to target class object.
+			                        .Actually Bean element  having "autowire=''Xvalues " " attribute having possible values
+			                                          Xvalues  are : .byType                       (Setter DI)                  [ByType mechanism]
+			                                                                  .byName                     (Setter DI)                  [ByName mechanism]
+			                                                                  .constructor              (Constructor)              [ByType mechanism]
+			                                                                  .autodetect               (Setter DI and Constructor) [ByType mechanism]
+			                                                                  .no                     (by default)
+			                         .And also By default bean element  having autowire-candidate="true"  :means by default every element	
+			                                                                                                                                                          participate in autoWiring	                        
+
+                                    Note :If you want use autoWiring for all beans ,then we can use default-autowire="Xvalues"
+                                                      Xvalues  are : .byType
+			                                                                  .byName
+			                                                                  .constructor
+			                                                                  .autodetect
+			                                                                  .no                     (by default)
+			                                                                  
+			                                                                  
+ @Autowired   annotation : First i will check "byType" for ex if found two dependent objects then it goes to "byName" 
+                                       
+			         </description>
+
+			                <!-- To activate @Required annotation -->
+			                <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+		                                                                   
+			                   <bean id="per" class="com.java.beans.Person"><!-- Not required to call any autowire attribute becoz we are using @Autowired annotation -->
+			                          <property name="name" value="HVirus"/>
+			                   </bean>
+			 
+			 	            <bean id="address" class="com.java.beans.Address"> 
+			                   <property name="city"  value="Hyderabad _Madhapur"/>
+			                   <property name="zipcode"  value="500038"/>
+			                </bean>
+			                <bean id="addr" class="com.java.beans.Address" >
+			                  <property name="city"  value="Amaravathi"/>
+			                  <property name="zipcode"  value="522020"/>
+			                </bean>
+
+			</beans>

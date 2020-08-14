@@ -1,0 +1,54 @@
+#AutoWiringByTypeTest  :ByType(SDI)      [mechanism byType]
+
+Employee. 0-param constructor...!
+Address. 0-param constructor...!
+Employee.setEmpId()
+Employee.setEmpName()
+Employee.setAddress()
+Address. 0-param constructor...!
+Car. 0-param constructor
+Engine. o-param constructor..!
+Engine. o-param constructor..!
+Autowiring byType...........!
+Employee [empId=752, empName=Harish, address=Address [city=Amaravathi, zipcode=522020]]
+
+Car [engine=Engine [engineNo=894, modalYear=2014]]
+
+
+#AutoWiringByNameTest   :ByName(SDI)             [mechanism byName]
+
+Flipkart. 0-param constructor...!
+Order. o-param constructor...!
+Address. 0-param constructor...!
+Address. 0-param constructor...!
+Autowiring byName...........!
+Flipkart [order=Order [orderId=OD09284, address=Address [city=Hyderabad, zipcode=500038]]]
+
+
+
+#AutoWiringByUsingConstructorTest   :(Constructor)CDI       [mechanism byType]
+
+Conductor. 0-param constructor..!
+Bus. 1-param constructor..!
+Conductor. 0-param constructor..!
+Autowiring by using constructor...........!
+Bus [conductor=Conductor [name=varunKumar, routeId=Hyd-Vizag]]
+
+
+#AutoWiringByUsingAutoDetectTest        :(AutoDetect)      [mechanism byType]
+Student. 0-param constructor..!
+Address. 0-param constructor...!
+Student.setAddress()
+Address. 0-param constructor...!
+Autowiring by using autodetect...........!
+Student [address=Address [city=Kadapa, zipcode=516001]]
+
+
+#AutoWiredAnnotationTest
+Person. 0-param constructor..!
+Address. 0-param constructor...!
+Person.setName()
+Address. 0-param constructor...!
+Person [name=HVirus, address=Address [city=Amaravathi, zipcode=522020]]
+
+

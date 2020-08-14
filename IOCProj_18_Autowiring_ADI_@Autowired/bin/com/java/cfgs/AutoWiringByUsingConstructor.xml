@@ -1,0 +1,37 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			
+			<beans>
+			       <description>
+			                        #AutoWiring 
+			                        .AutoWiring means automatically inject it dependent objects to target class object.
+			                        .Actually Bean element  having "autowire=''Xvalues " " attribute having possible values
+			                                          Xvalues  are : .byType                       (Setter DI)                  [ByType mechanism]
+			                                                                  .byName                     (Setter DI)                  [ByName mechanism]
+			                                                                  .constructor              (Constructor)              [ByType mechanism]
+			                                                                  .autodetect               (Setter DI and Constructor) [ByType mechanism]
+			                                                                  .no                     (by default)
+			                         .And also By default bean element  having autowire-candidate="true"  :means by default every element	
+			                                                                                                                                                          participate in autoWiring	                        
+
+                                    Note :If you want use autoWiring for all beans ,then we can use default-autowire="Xvalues"
+                                                      Xvalues  are : .byType
+			                                                                  .byName
+			                                                                  .constructor
+			                                                                  .autodetect
+			                                                                  .no                     (by default)
+			         </description>
+			         
+			        <!-- .AutoWiring byusing constructor [Internally it use byType mode]......! -->    
+			        <bean id="bus" class="com.java.beans.Bus"  autowire="constructor"/>
+			        
+			        <bean id="conductor" class="com.java.beans.Conductor">
+			               <property name="name" value="varunKumar"/>
+			               <property name="routeId" value="Hyd-Vizag"></property>
+			        </bean>
+			        
+			        <bean id="cond1" class="com.java.beans.Conductor" autowire-candidate="false">
+			               <property name="name" value="rojakumari"/>
+			               <property name="routeId" value="Hyd-Tamilnadu"></property>
+			        </bean>
+			</beans>
