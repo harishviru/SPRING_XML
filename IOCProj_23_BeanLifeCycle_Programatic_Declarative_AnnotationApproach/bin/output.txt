@@ -1,0 +1,28 @@
+#Programmatic  Approach 
+ start ......******************Programmatic  Approach ****************************
+Employee. 0-param constructor..!
+Employee.setEmpName()
+Employee.afterPropertiesSet()
+emp ----->Raghav
+Employee.destroy()
+ End ......******************Programmatic  Approach ****************************
+
+#Declarative  Approach 
+ start ......******************Declarative  Approach ****************************
+Student. 0-param constructor.!
+Student.setStudName()
+aftersetting properties...............Student.myInit()
+Student ----->Vamsi
+Student.myDestroy()
+ End ......******************Declarative  Approach ****************************
+
+#Annotation  Approach
+ start ......******************Annotation  Approach ****************************
+Mobile.setMobileComp()
+Mobile.setRam()
+Mobile.setRom()
+aftersetting properties.................Mobile.myInit()
+mobile ----->Mobile [mobileComp=Oppo, ram=6, rom=256]
+Mobile.myDestroy()
+ End ......******************Annotation  Approach ****************************
+

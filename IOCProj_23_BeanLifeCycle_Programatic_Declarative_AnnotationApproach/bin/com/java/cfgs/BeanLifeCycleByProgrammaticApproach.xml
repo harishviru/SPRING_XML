@@ -1,0 +1,21 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">	
+			
+			<beans>
+			                  <description>
+			                                               #BeanLifeCycle 
+			                                               We can implement beanLifeCycle in 3 ways .
+			                                               1)Programmatic  Approach   (By Implement  InitializingBean,DisposableBean Interfaces in Pojo classes) 
+			                                               2)Declarative Approach        (By using  "init-method" ,"destroy-method" in bean element)
+			                                               3)Annotation Approach        (By Using @PostConstruct and @PreDestroy  )[To activate these annotation we can use CommonAnnotationBeanPostProcessor class]
+			                  
+			     Note : If you want apply for all beans ,then we can use 
+			                                                        "default-init-method"   and   "default-destroy-method"    in beans element      
+			                  
+			                  </description>
+			  <!--  1)Programmatic  Approach  -->
+			<bean id="emp" class="com.java.beans.Employee">
+			                <property name="empName" value="Raghav"/>
+			</bean>
+			
+			</beans>
