@@ -1,7 +1,7 @@
 package com.java.beans;
 public class Address {
 
-	private String city;
+	private  String city;
 	private long zipcode;
 
 	public Address() {
