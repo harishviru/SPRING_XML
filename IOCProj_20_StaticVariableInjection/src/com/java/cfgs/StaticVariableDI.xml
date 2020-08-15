@@ -2,6 +2,13 @@
 			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 			
 			<beans>		
+			         <description>
+			           You have two possibilities:
+                                               1. non-static setter for static property/field;
+                                               2.using org.springframework.beans.factory.config.MethodInvokingFactoryBean to invoke a static setter
+	         
+			         </description>
+			
 			 <bean id="emp" class="com.java.beans.Employee"/>
 			
 			   <!-- To initial static variable by using MethodInvokingFactoryBean -->
