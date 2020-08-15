@@ -1,0 +1,18 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">	
+			
+			<beans>
+			                  <description>
+			                             #Method Replacer:
+			                             :. You can replace or override the existing method by implementing MethodReplacer interface. 
+			                             This interface has only one method 
+			                             :public Object reimplement(Object obj, Method method, Object[] args) throws Throwable;
+			     			            
+			     			            Note :we can use   "replaced-method" child element in bean element 	     			                  			                                                              
+			                  </description>
+			                  		                  
+	                           <bean id="bank" class="com.java.beans.ICICIBank">
+		                                      <replaced-method name="calInterest" replacer="methodRep"/>
+		                       </bean>		                   
+			                   <bean id="methodRep" class="com.java.beans.NewICICIMethodReplacer"/>               
+			</beans>

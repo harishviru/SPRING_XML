@@ -1,0 +1,9 @@
+#MethodReplacerTest
+
+ICICIBank. 0-param constructor.......!
+ICICIBank...Deposit method
+ICICIBank...withDraw method
+ NewICICIMethodReplacer .............. calInterest logic .....
+method :calInterest
+obj--->com.java.beans.ICICIBank$$EnhancerByCGLIB$$d1990d52@4cf777e8
+args-->[Ljava.lang.Object;@2f686d1f
