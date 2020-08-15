@@ -1,0 +1,12 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">	
+			<beans>
+			                <description>
+			                                         #factory-method and factory-bean attribute in bean element.
+			                                         Non static factory method is used by factory-method ,factory-bean attribute.	
+			                                          
+			                                        Note : Non static factory method return another class object.	  
+			                </description>			                                                           
+                                     <bean id="clgFactory" class="com.java.beans.CollegeFactory"/>                                  
+                                     <bean id="stud" class="com.java.beans.CollegeFactory" factory-bean="clgFactory" factory-method="getStudent"/>
+ 			</beans>

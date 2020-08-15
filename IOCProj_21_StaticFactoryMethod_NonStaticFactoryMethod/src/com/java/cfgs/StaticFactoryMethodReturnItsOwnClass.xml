@@ -1,0 +1,15 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">	
+			<beans>
+			                <description>
+			                                         #factory-method attribute in bean element.
+			                                          static factory method is used by factory-method.	
+			                                          
+			                                        Note :  static factory method return its own class object	  
+			                                             Ex : Employee   class having static factory method- getEmp     ,return Employee class object     
+			                                             Ex : Calendar     class having static factory method -getInstance, return Calendar class object     			                                                                  
+			                </description>			                                                           
+			                  <bean id="emp" class="com.java.beans.Employee"  factory-method="getEmp"/>		                  
+			                  <bean id="cal" class="java.util.Calendar" factory-method="getInstance"/>
+			                 
+			</beans>
