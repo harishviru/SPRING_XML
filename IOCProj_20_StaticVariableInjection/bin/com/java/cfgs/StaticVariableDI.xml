@@ -1,0 +1,44 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			
+			<beans>		
+			 <bean id="emp" class="com.java.beans.Employee"/>
+			
+			   <!-- To initial static variable by using MethodInvokingFactoryBean -->
+			   	<!-- static variable with static method-->
+			<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+			        <property name="staticMethod" value="com.java.beans.Employee.setEmpName"/> <!-- Static method name -->
+			        <property name="arguments">                                                                                           <!-- arguments to pass -->
+			             <list>
+			                 <value>harish</value>
+			             </list>
+			        </property>
+			</bean>
+
+			   	<!-- static variable with non-static method-->
+              <bean id="stud" class="com.java.beans.Student">
+                     <property name="studName" value="RajKumar"/>
+              </bean>
+
+     <!-- System.getProperty("java.version")  [static variable with static method-]-->
+     	<bean id="javaVersion" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="staticMethod"><value>java.lang.System.getProperty</value></property>
+		<property name="arguments">
+			<list>
+				<value>java.version</value>
+			</list>
+		</property>
+	</bean>
+	
+	  <!-- System.getProperty("java.version") # another way-->
+	<bean id="javaVersion1" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="targetClass"><value>java.lang.System</value></property>
+		<property name="targetMethod"><value>getProperty</value></property>
+		<property name="arguments">
+			<list>
+				<value>java.version</value>
+			</list>
+		</property>
+	</bean>
+			
+</beans>
