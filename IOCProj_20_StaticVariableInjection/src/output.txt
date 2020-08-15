@@ -1,6 +1,31 @@
+
+#output
 harish
 
 RajKumar
 
 1.8.0_261
 1.8.0_261
+
+#content
+   You have two possibilities:
+    1. non-static setter for static property/field;
+    2.using org.springframework.beans.factory.config.MethodInvokingFactoryBean to invoke a static setter
+    
+    3.In the first option you have a bean with a regular setter but instead setting an instance property you set the static property/field.
+    
+    public void setTheProperty(Object value) {
+         foo.bar.Class.STATIC_VALUE = value;
+     }
+     
+   
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="staticMethod" value="foo.bar.Class.setTheProperty"/>
+        <property name="arguments">
+            <list>
+                <ref bean="theProperty"/>
+            </list>
+       </property>
+    </bean>
+
+     
