@@ -1,0 +1,43 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">	
+			
+			<beans>
+			                  <description>
+			                             #lookup method injection:
+			                             :.Spring lookup method injection is the process of dynamically overriding a registered bean method.
+			                             :lookup method injection used for Interface ,abstract ,concrete methods
+			     
+			                 Note :
+			                  			 1. The bean class cannot be final.
+                                        2.The method annotated with @Lookup or lookup-method is sub-element of bean element ,
+                                                                                     cannot be private , static or final.
+                                        3.In Interface and abstract class we can create abstract   +(private , static or final.)   method.
+                                        4.If  Concrete class getEngine method is final ,then it will execute Truck(Concrete class) engine method but not its SubClass  method                                
+			                                                              
+			                  </description>
+
+                                    <!-- for Car (Interface LookUp method) -->
+	                           <bean id="car" class="com.java.beans.Car">
+		                                       <lookup-method name="getEngine" bean="hyudEng" />
+	                           </bean>
+			                    <bean id="hyudEng" class="com.java.beans.Engine">
+			                           <property name="engineName" value="Hyundai Elite"/>
+			                     </bean>
+			
+                                    <!-- for MotorBike (abstract class LookUp method) -->
+	                           <bean id="motarBike" class="com.java.beans.MotorBike">
+		                                       <lookup-method name="getEngine" bean="bajajEng" />
+	                           </bean>
+			                    <bean id="bajajEng" class="com.java.beans.Engine">
+			                           <property name="engineName" value="Bajaj Pulsar 150"/>
+			                     </bean>
+			
+                                    <!-- for Truck (concrete class LookUp method) --> 
+                                    <!-- If  getEngine method is final ,then it will execute Truck engine method-->
+	                           <bean id="truck" class="com.java.beans.Truck">
+		                                       <lookup-method name="getEngine" bean="mahiEng" />
+	                           </bean>
+			                    <bean id="mahiEng" class="com.java.beans.Engine">
+			                           <property name="engineName" value="Mahindra Bolero Maxitruck Plus"/>
+			                     </bean>
+			</beans>

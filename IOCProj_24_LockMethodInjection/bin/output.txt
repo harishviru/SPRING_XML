@@ -1,0 +1,14 @@
+#LookUpMethodInjectionTest
+
+Truck .0-param constructor..!
+ **********LookUp method (Using Interface method)*************
+Hyundai Elite
+carImp class------->com.java.beans.Car$$EnhancerByCGLIB$$e3d59960
+
+ **********LookUp method (Using abstrat class method)*************
+Bajaj Pulsar 150
+motarBike class------->com.java.beans.MotorBike$$EnhancerByCGLIB$$72c50974
+
+ **********LookUp method (Using concrete class method)*************
+Mahindra Bolero Maxitruck Plus
+truck class------->com.java.beans.Truck$$EnhancerByCGLIB$$8deb3c7e
