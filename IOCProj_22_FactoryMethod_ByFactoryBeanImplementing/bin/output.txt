@@ -1,0 +1,7 @@
+#StaticFactoryMethodByImplementingFactoryBeanTest
+
+AnimalFactory.setAnimalName()
+AnimalFactory.isSingleton()
+AnimalFactory.getObjectType()
+AnimalFactory.isSingleton()
+bow .....bow ......!

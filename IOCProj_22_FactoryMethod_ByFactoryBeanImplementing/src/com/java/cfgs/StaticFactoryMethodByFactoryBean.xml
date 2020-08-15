@@ -1,0 +1,14 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">	
+			<beans>
+			                <description>
+			                            			     .Factory implemented by three types
+			                            			      1)Static Factory method by "factory-method" attribute in bean element.
+			                            			      2)Non-Static Factory method by "factory-method" and "factory-bean" attribute and in bean element.
+			                            			      3)By  implementing org.springframework.beans.factory.FactoryBean                                                            
+			                </description>		
+			                  <!-- #3 -->	                                                           
+			                  <bean id="animal" class="com.java.beans.AnimalFactory">
+			                          <property name="animalName" value="dog"/>
+			                  	</bean>	                      
+			</beans>
