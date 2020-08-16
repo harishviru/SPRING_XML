@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+                         <description>
+                                                 #J2EE Annotation            mechanism                         (In Spring)
+                                                 @Resource                    ==byName                 ===    @Autowired 
+                                                 @Inect                            ==byName                 ===    @Autowired
+                                                 @Named                                                                        @Component
+                         </description>
+
+	<!-- To activate the '@Resource' &'@Inject' annotation in the spring framework -->
+     <!-- 	<context:annotation-config /> -->
+             <!-- Or -->
+	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+
+
+
+	<bean id="company" class="com.java.beans.Company">
+		<property name="name" value="TCS Pvt. Ltd." />
+		<property name="location" value="India" />
+	</bean>
+	<bean id="comp" class="com.java.beans.Company">
+		<property name="name" value="X Pvt. Ltd." />
+		<property name="location" value="America" />
+	</bean>
+
+
+	<bean id="emp" class="com.java.beans.Employee">
+		<property name="id" value="894615" />
+		<property name="name" value="Rajesh" />
+	</bean>
+	 <bean id="address" class="com.java.beans.Address">
+		<property name="area" value="Madhapur" />
+		<property name="city" value="Hyderabad" />
+	</bean>
+	<bean id="address1" class="com.java.beans.Address">
+		<property name="area" value="Ashok Nagar." />
+		<property name="city" value="Vijayawada" />
+	</bean>
+</beans>
