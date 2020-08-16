@@ -1,0 +1,21 @@
+Aug 16, 2020 5:21:40 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4783da3f: startup date [Sun Aug 16 17:21:40 IST 2020]; root of context hierarchy
+Aug 16, 2020 5:21:40 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [com/java/cfgs/EventHandling.xml]
+Aug 16, 2020 5:21:40 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@75bd9247: defining beans [com.java.beans.IOCStartUpEventListener#0,com.java.beans.IOCRefreshEventListener#0,com.java.beans.IOCStopEventListener#0,com.java.beans.IOCCloseEventListener#0]; root of factory hierarchy
+IOC Refresh....While container startup..!
+IOC StartUp...........!
+When IOC stop......!
+Aug 16, 2020 5:21:40 PM org.springframework.context.support.AbstractApplicationContext doClose
+INFO: Closing org.springframework.context.support.ClassPathXmlApplicationContext@4783da3f: startup date [Sun Aug 16 17:21:40 IST 2020]; root of context hierarchy
+When IOC Close........!
+Aug 16, 2020 5:21:40 PM org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons
+INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@75bd9247: defining beans [com.java.beans.IOCStartUpEventListener#0,com.java.beans.IOCRefreshEventListener#0,com.java.beans.IOCStopEventListener#0,com.java.beans.IOCCloseEventListener#0]; root of factory hierarchy
+Aug 16, 2020 5:21:40 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4783da3f: startup date [Sun Aug 16 17:21:40 IST 2020]; root of context hierarchy
+Aug 16, 2020 5:21:40 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [com/java/cfgs/EventHandling.xml]
+Aug 16, 2020 5:21:40 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@34b7bfc0: defining beans [com.java.beans.IOCStartUpEventListener#0,com.java.beans.IOCRefreshEventListener#0,com.java.beans.IOCStopEventListener#0,com.java.beans.IOCCloseEventListener#0]; root of factory hierarchy
+IOC Refresh....While container startup..!
