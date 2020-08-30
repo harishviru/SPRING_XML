@@ -1,0 +1,17 @@
+Start**********************CustomQualiferTest.qualiferWithMetaTag()***********************
+Student -0-param constructor
+Teacher -0-param constructor
+personName---------->Harish
+Student [sId=423]
+End**********************CustomQualiferTest.qualiferWithMetaTag()***********************
+
+Start**********************CustomQualiferTest.qualiferInnerElement()***********************
+Student -0-param constructor
+Teacher -0-param constructor
+personName---------->Harish
+Student [sId=423]
+End**********************CustomQualiferTest.qualiferInnerElement()***********************
+
+Start**********************CustomQualiferTest.qualiferWithoutAnyMethod()***********************
+-------------Cat--------------------
+End**********************CustomQualiferTest.qualiferWithoutAnyMethod()***********************
