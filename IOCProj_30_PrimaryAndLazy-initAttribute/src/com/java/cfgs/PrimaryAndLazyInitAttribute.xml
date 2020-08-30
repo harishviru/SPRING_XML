@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+             
+               <description>
+                             *  By default primary="false" in every bean element.
+                             * If IOC Container get confused which bean want to inject ,when we can use primary="true" 
+                           
+                           # lazy-init
+                           * By default  lazy-init="false" in every bean element. That means the beans are loaded when IOC Container start-up
+                           * If you use  lazy-init="true" ,Then IOC Container will create bean class object when client give the request.
+               
+               </description>
+             
+             <bean id="st1" class="com.java.beans.Student">
+                <property name="sId" value="456"/>
+                <property name="studName" value="IndraNil"/>
+             </bean>
+             
+             <bean id="st2" class="com.java.beans.Student" primary="true" lazy-init="true">
+                <property name="sId" value="963"/>
+                <property name="studName" value="Somoe Joe"/>
+             </bean>
+
+         <bean id="clg" class="com.java.beans.College" autowire="byType"/>
+                 
+      </beans>

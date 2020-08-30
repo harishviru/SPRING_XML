@@ -1,0 +1,16 @@
+# lazy-init="true" in student id="st2"
+
+Student -0-param constructor
+College. 0-param constructor
+Student -0-param constructor
+Student [sId=963, studName=Somoe Joe]
+
+
+# lazy-init="false" in student id="st2"
+
+Student -0-param constructor
+Student -0-param constructor
+College. 0-param constructor
+Student [sId=963, studName=Somoe Joe]
+
+
