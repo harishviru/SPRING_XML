@@ -2,6 +2,6 @@
 			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 			
 			<beans>
-			<bean id="w" class="com.java.beans.Welcome"/>
+			<bean id="w" class="com.java.beans.Welcome"/>		 
 			
 			</beans>
